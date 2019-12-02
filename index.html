@@ -13,53 +13,39 @@
 
 <body>
 <div class="container-fluid">
-  <div class="row">
-    <div class="col Box1">
-    <div class="jumbotron">
+  <div class="row Box1">
+    <div class="jumbotron-fluid">
         <h1 class="display-4">Disco Mode</h1>
         <p class="lead">This is the primary mode of this app, Disco Walk Mode!</p>
         <hr class="my-4">
         <p>Have you ever wanted a soundtrack in real life? Set your walking tempo below and disco dance, disco walk, disco whatever. Enjoy!</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Stay Disco Mode</a>
-      </div></div>
-    <div class="col Box2">
-        <div class="jumbotron">
-            <h1 class="display-4">Coming Soon</h1>
-            <p class="lead">Use your favorite audio here and have it match whatever pace you want to walk</p>
-            <hr class="my-4">
-            <p>Want to walk to your favorite audio at any walking speed? Designate your audio here and set the walking rate below.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Your Own Audio Mode</a>
-          </div>
-    </div>
+        </div></div>
   </div>
 
   <div class="row">
-    <div class="col Box3">
-      <div class="jumbotron">
+    <div class="col Box2">
+      <div class="jumbotron-fluid">
           <h1 class="display-4">Set the Tempo</h1>
     <form>
-        What tempo would you like?<input type="number" value=""
-            id="tempo" /><br />
+        What tempo would you like?<input type="number" value="" id="tempo" /><br />
 
     </form>
 
-    <input type="button" value="PLAY"  onclick="play()">
+    <input type="button" value="PLAY"  onclick=play()>
     <audio id="audio" src="stayinAlive.mp3" ></audio>
   </div>
   </div>
 
-    <div class="col Box4">
-        <div class="jumbotron">
-            <h1 class="display-4">Coming Soon</h1>
-            <p class="lead">Tap the Beat</p>
+    <div class="col Box3">
+        <div class="jumbotron-fluid" onclick="tap()">
+            <h1 class="display-4">Tap the Tempo</h1>
+            <p class="lead">Tap the Beat anywhere on this purple box</p>
             <hr class="my-4">
-            <p>Tap out the steps here to make the walking tempo</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">Tap</a>
+            <p id="tappedTempo">Tap out the steps here to make the walking tempo</p>
+            <a class="btn btn-primary btn-lg topBox" href="#" role="button">Tap</a>
           </div>
     </div>
   </div>   
-
-</div>
 
     <script type="text/javascript" src="script.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
