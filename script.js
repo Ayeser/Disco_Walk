@@ -2,6 +2,7 @@ let lastTap = 0;
 var rate = (document.getElementById("tempo").value / 103);
 
 function play() {
+    event.preventDefault();
     var audio = document.getElementById("audio");
     audio.loop = true;
     audio.playbackRate = rate;
@@ -9,6 +10,7 @@ function play() {
 }
 
 function tap() {
+    event.preventDefault();
     var d = new Date();
     var t = d.getTime();
     if(t - lastTap < 3000) {
